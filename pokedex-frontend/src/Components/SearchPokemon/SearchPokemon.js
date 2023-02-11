@@ -1,16 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SearchPokemon = () => {
-  const search = "nome";
+  const [search, setSearch] = useState("dito");
   const onChangeHandler = (event) => {
-    search = event.target.value;
+    setSearch(event.target.value);
   };
 
+  const onClickHandler = () =>{
+
+  }
+
+  
   return (
     <div className="search-container">
       <div className="searchPokemon">
         <input placeholder="Buscar Pokemon" onChange={onChangeHandler} />
-        {search}
+      </div>
+
+      <div className="search-btn">
+        <button onClick={onClickHandler}>Buscar</button>
       </div>
     </div>
   );
