@@ -4,18 +4,7 @@
   box-sizing: border-box;
 }
 
-nav{
-  height: 4em;
-  display: flex;
-  flex-direction: space-evenly;
-  justify-content: center;
-  align-items: center;
-}
-
-.navBar-img{
-  width: 10em;
-}
-
 .App{
   text-align: center;
 }
+
