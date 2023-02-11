@@ -1,12 +1,20 @@
+import React from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
-import SearchPokemon from "./Components/SearchPokemon/SearchPokemon";
+import SearchBar from "./Components/SearchPokemon/SearchPokemon";
+
 
 function App() {
   return (
     <div>
       <NavBar />
-      <SearchPokemon />
+      <SearchBar
+       
+      />
+
+      <div className="App">
+
+      </div>
     </div>
   );
 }
