@@ -1,4 +1,13 @@
 import React from "react";
+<<<<<<< HEAD
+
+const NavBar = () => {
+    const logo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
+    return (
+        <nav>
+            <div>
+                <img
+=======
 import { Nav,NavBarImg } from "./style";
 
 const NavBar = () => {
@@ -7,13 +16,18 @@ const NavBar = () => {
         <Nav>
             <div>
                 <NavBarImg
+>>>>>>> 686beaf0612ab641044ceb642871d68b166a58c2
                     alt="logo-pokedex"
                     src={logo}
                     className="navBar-img"
                 />
             </div>
+<<<<<<< HEAD
+        </nav>
+=======
             
         </Nav>
+>>>>>>> 686beaf0612ab641044ceb642871d68b166a58c2
     );
 };
 export default NavBar;
