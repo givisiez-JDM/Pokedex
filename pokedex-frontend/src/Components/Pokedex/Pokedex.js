@@ -12,7 +12,7 @@ const Pokedex = (props) => {
         <div>Paginação</div>
       </PokedexHeader>
       {loading ? (
-        <div>Carregando, segura fera...</div>
+        <div>Carregando, guenta aí...</div>
       ) : (
         <PokedexGrid>
           {pokemon &&
