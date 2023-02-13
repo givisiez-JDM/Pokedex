@@ -1,26 +1,61 @@
-<<<<<<< HEAD
+
+import React, {useEffect,useState} from "react";
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
-import SearchPokemon from "./Components/SearchPokemon/SearchPokemon";
-=======
-import React from "react";
-import "./App.css";
-import NavBar from "./Components/NavBar/NavBar";
-import SearchBar from "./Components/SearchPokemon/SearchPokemon";
+import SearchBar from "./Components/SearchBar/SearchBar";
 import Pokedex from "./Components/Pokedex/Pokedex";
->>>>>>> 686beaf0612ab641044ceb642871d68b166a58c2
+import { getPokemonData, getPokemons, searchPokemon } from "./api";
+
 
 function App() {
+ 
+  const [loading, setLoading] = useState(false);
+  const [pokemon, setPokemon] = useState([]);
+ 
+  const fetchPokemons = async () => {
+    try {
+      setLoading(true);
+      const data = await getPokemons();
+      const promises = data.results.map(async (pokemon) => {
+        return await getPokemonData(pokemon.url);
+      });
+
+      const results = await Promise.all(promises);
+      setPokemon(results);
+      setLoading(false);
+    } catch (error) {
+      console.log("fetchPokemons error: ", error);
+    }
+  };
+  
+  useEffect(() =>{
+    fetchPokemons()
+  },[])
+
+  const onSearchHandler = async (pokemon) => {
+    if(!pokemon) {
+      return fetchPokemons();
+    }
+
+    setLoading(true)
+
+    const result = await searchPokemon(pokemon)
+    if(!result) {
+
+    } else {
+    
+    }
+    setLoading(false)
+
+  }
   return (
     <div>
       <NavBar />
-<<<<<<< HEAD
-      <SearchPokemon />
-=======
-      <SearchBar />
-      <Pokedex />
+      <SearchBar onSearch={onSearchHandler}/>
+      <Pokedex  pokemon={pokemon}
+          loading={loading}/>
       <div className="App"></div>
->>>>>>> 686beaf0612ab641044ceb642871d68b166a58c2
+
     </div>
   );
 }

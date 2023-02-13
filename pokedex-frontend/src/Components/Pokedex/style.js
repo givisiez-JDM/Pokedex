@@ -10,6 +10,6 @@ padding: 10px;
 export const PokedexGrid = styled.div`
 display: grid;
 gap: 10px;
-grid-template-columns: repeat(3,1fr);
+grid-template-columns: repeat(3, 1fr);
 
 `
