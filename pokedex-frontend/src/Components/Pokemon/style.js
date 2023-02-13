@@ -11,8 +11,8 @@ export const ImgPokemonContainer = styled.div`
 `;
 
 export const PokemonImg = styled.img`
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
   margin-right: 10px;
 `;
 export const CardBody = styled.div`
