@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
 
-const SearchPokemon = () => {
-  const search = "nome";
-  const onChangeHandler = (event) => {
-    search = event.target.value;
-  };
-
-  return (
-    <div className="search-container">
-      <div className="searchPokemon">
-        <input placeholder="Buscar Pokemon" onChange={onChangeHandler} />
-        {search}
-      </div>
-    </div>
-  );
-};
-
-export default SearchPokemon;
-=======
 import React, { useState } from "react";
 import { searchPokemon } from "../../api";
 import { SearchContainer,SearchBarDiv,SearchBarInput,SearchBtnButton } from "./style";
@@ -58,4 +38,4 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
->>>>>>> 686beaf0612ab641044ceb642871d68b166a58c2
+
