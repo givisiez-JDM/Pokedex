@@ -11,11 +11,19 @@ function App() {
  
   const [loading, setLoading] = useState(false);
   const [pokemon, setPokemon] = useState([]);
+  const [page, setPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const [pokemons, setPokemons] = useState([]);
+  const [favorites, setFavorites] = useState([]);
+  const [notFound, setNotFound] = useState(false);
+
+  const itensPerPage = 25;
  
   const fetchPokemons = async () => {
     try {
       setLoading(true);
-      const data = await getPokemons();
+      setNotFound(false);
+      const data = await getPokemons(itensPerPage, itensPerPage * page);
       const promises = data.results.map(async (pokemon) => {
         return await getPokemonData(pokemon.url);
       });
@@ -23,14 +31,21 @@ function App() {
       const results = await Promise.all(promises);
       setPokemon(results);
       setLoading(false);
+      setTotalPages(Math.ceil(data.count / itensPerPage));
     } catch (error) {
       console.log("fetchPokemons error: ", error);
     }
   };
-  
   useEffect(() =>{
     fetchPokemons()
   },[])
+  
+  useEffect(() => {
+    fetchPokemons();
+  }, [page]);
+
+
+
 
   const onSearchHandler = async (pokemon) => {
     if(!pokemon) {
@@ -38,12 +53,15 @@ function App() {
     }
 
     setLoading(true)
+    setNotFound(false)
 
     const result = await searchPokemon(pokemon)
     if(!result) {
-
+   setNotFound(true)
     } else {
-    
+      setPokemons([result])
+      setPage(0)
+      setTotalPages(1)
     }
     setLoading(false)
 
@@ -52,10 +70,16 @@ function App() {
     <div>
       <NavBar />
       <SearchBar onSearch={onSearchHandler}/>
-      <Pokedex  pokemon={pokemon}
-          loading={loading}/>
-      <div className="App"></div>
-
+      {notFound ? (
+          <div class-name="not-found-text"> Meteu essa?! </div>
+        ) : 
+        (<Pokedex
+          pokemons={pokemons}
+          loading={loading}
+          page={page}
+          setPage={setPage}
+          totalPages={totalPages}
+        />)}
     </div>
   );
 }
