@@ -1,6 +1,6 @@
 import React from "react";
-import { PokedexHeader, PokedexGrid } from "./style";
 import Pokemon from "../Pokemon/Pokemon";
+import { PokedexHeader, PokedexGrid } from "./style";
 
 const Pokedex = (props) => {
   const { pokemon, loading } = props;
@@ -12,14 +12,13 @@ const Pokedex = (props) => {
         <div>Paginação</div>
       </PokedexHeader>
       {loading ? (
-        <div>Carregando, guenta as pontas...</div>
+        <div>Carregando, segura fera...</div>
       ) : (
         <PokedexGrid>
-          {pokemon && pokemon.map((pokemon, index) => {
-            return (
-              <Pokemon key={index}  pokemon={pokemon}/>
-            );
-          })}
+          {pokemon &&
+            pokemon.map((pokemon, index) => {
+              return <Pokemon key={index} pokemon={pokemon} />;
+            })}
         </PokedexGrid>
       )}
     </div>
