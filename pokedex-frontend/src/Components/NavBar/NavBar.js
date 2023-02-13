@@ -9,6 +9,8 @@ const NavBar = () => {
       <div>
         <NavBarImg alt="logo-pokedex" src={logo} className="navBar-img" />
       </div>
+
+      <div>❤️</div>
     </Nav>
   );
 };
