@@ -1,5 +1,5 @@
 import React from "react";
-import {PaginationContainer} from "./style"
+import PaginationContainer from "./style"
 
 
 const Pagination = (props) => {
