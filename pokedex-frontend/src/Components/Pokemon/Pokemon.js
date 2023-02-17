@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import {
   Card,
   ImgPokemonContainer,
@@ -12,14 +12,14 @@ import {
 } from "./style";
 
 const Pokemon = (props) => {
-  //const { favoritePokemons, updateFavoritePokemons } = useContext(); //FavoriteContext
+  const { favoritePokemons, updateFavoritePokemons } = useContext(); //FavoriteContext
   const { pokemon } = props;
 
   const onHeartClick = () => {
-    //updateFavoritePokemons(pokemon.name);
+    updateFavoritePokemons(pokemon.name);
   };
 
-  //const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "🖤";
+  const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "🖤";
 
   return (
     <>
@@ -45,7 +45,7 @@ const Pokemon = (props) => {
             })}
           </TypePokemon>
           <PokemonButtonHeart onClick={onHeartClick}>
-         
+          {heart}
           </PokemonButtonHeart>
         </CardBottom>
       </CardBody>
