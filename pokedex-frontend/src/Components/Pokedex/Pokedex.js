@@ -12,8 +12,8 @@ const Pokedex = (props) => {
     }
 }
 const onRightClickHandler = () => {
-    if(page+1 !== totalPages){
-        setPage(page +1)
+    if(page +1 !== totalPages){
+        setPage(page + 1)
     }
 }
   return (
