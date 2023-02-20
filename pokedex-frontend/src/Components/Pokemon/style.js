@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   display: flex;
-  box-shadow: 4px 4px 4px (0, 0, 0, 0.25);
+  margin: 10px 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
+  //border: 1px solid lightgrey;
 `;
 
 export const ImgPokemonContainer = styled.div`
@@ -16,37 +18,38 @@ export const PokemonImg = styled.img`
   margin-right: 10px;
 `;
 export const CardBody = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-padding: 10px 10px 10px 0px;
-flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  flex: 1;
 `;
 
 export const CardHeader = styled.div`
-display: flex;
-flex-direction: row;
-justify-content:space-between;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 
-h3{
-    text-transform:capitalize;
-}
+  h3 {
+    text-transform: capitalize;
+  }
 `;
 
 export const CardBottom = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const TypePokemon = styled.div`
-display: flex;
-text-transform: capitalize;
+  display: flex;
+  text-transform: capitalize;
 `;
 
 export const TypeText = styled.div`
-margin-right: 10px;
+  margin-right: 10px;
 `;
 
 export const PokemonButtonHeart = styled.button``;
