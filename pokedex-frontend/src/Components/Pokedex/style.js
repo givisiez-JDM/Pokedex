@@ -21,3 +21,8 @@ grid-template-columns: repeat(3, 1fr);
 export const PokedexTitulo = styled.h1`
 color:white
 `
+export const TextLoading = styled.div`
+color:#F95587;
+font-size: 2em;
+background-color: #121212;
+`

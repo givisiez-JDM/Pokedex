@@ -6,6 +6,8 @@ import Pokedex from "./Components/Pokedex/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "./api";
 import { FavoriteProvider } from "./contexts/favoritesContext";
 import Footer from "./Components/Footer/Footer";
+import { TextLoading } from "./Components/Pokedex/style";
+
 
 const favoritesKey = "f";
 
@@ -83,29 +85,29 @@ function App() {
   };
   return (
     <>
-    <FavoriteProvider
-      value={{
-        favoritePokemons: favorites,
-        updateFavoritePokemons: updateFavoritePokemons,
-      }}
-    >
-      <div ClassName="App">
-        <NavBar />
-        <SearchBar onSearch={onSearchHandler} />
-        {notFound ? (
-          <> Pokemon não encontrado! </>
-        ) : (
-          <Pokedex
-            pokemons={pokemons}
-            loading={loading}
-            page={page}
-            setPage={setPage}
-            totalPages={totalPages}
-          />
-        )}
-      </div>
-    </FavoriteProvider>
-    <Footer/>
+      <FavoriteProvider
+        value={{
+          favoritePokemons: favorites,
+          updateFavoritePokemons: updateFavoritePokemons,
+        }}
+      >
+        <div ClassName="App">
+          <NavBar />
+          <SearchBar onSearch={onSearchHandler} />
+          {notFound ? (
+            <TextLoading> Pokemon não encontrado! </TextLoading>
+          ) : (
+            <Pokedex
+              pokemons={pokemons}
+              loading={loading}
+              page={page}
+              setPage={setPage}
+              totalPages={totalPages}
+            />
+          )}
+        </div>
+      </FavoriteProvider>
+      <Footer />
     </>
   );
 }

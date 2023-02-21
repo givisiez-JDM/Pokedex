@@ -7,7 +7,7 @@ import {
 } from "./style";
 
 const Searchbar = (props) => {
-  const [search, setSearch] = useState("ditto");
+  const [search, setSearch] = useState();
   const { onSearch } = props;
   const onChangeHandler = (e) => {
     setSearch(e.target.value);

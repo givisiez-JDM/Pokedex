@@ -11,10 +11,10 @@ export const Nav = styled.div`
 export const NavBarImg = styled.img`
   width: 12rem;
   margin-right: 50px;
-  margin-top:1.5em
+  margin-top: 1.5em;
 `;
 
 export const DivFavoritos = styled.div`
-color:white;
-margin-top:1.5em
-`
+  color: white;
+  margin-top: 1.5em;
+`;
