@@ -1,7 +1,7 @@
 import React from "react";
 import Pokemon from "../Pokemon/Pokemon";
 import Pagination from "../Pagination/Pagination";
-import { PokedexHeader, PokedexGrid } from "./style";
+import { PokedexHeader, PokedexGrid,PokedexTitulo,PokedexContainer } from "./style";
 
 const Pokedex = (props) => {
   const { pokemons, loading, page, setPage, totalPages } = props;
@@ -16,10 +16,11 @@ const Pokedex = (props) => {
       setPage(page + 1);
     }
   };
+
   return (
-    <div>
+    <PokedexContainer>
       <PokedexHeader>
-        <h1>Pokedex</h1>
+        <PokedexTitulo>Pokedex</PokedexTitulo>
         <Pagination
           page={page + 1}
           totalPages={totalPages}
@@ -37,7 +38,7 @@ const Pokedex = (props) => {
             })}
         </PokedexGrid>
       )}
-    </div>
+    </PokedexContainer>
   );
 };
 

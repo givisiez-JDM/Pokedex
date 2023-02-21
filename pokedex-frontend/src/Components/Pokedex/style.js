@@ -1,5 +1,9 @@
 import styled from "styled-components"
 
+export const PokedexContainer = styled.div`
+background-color: #121212;
+
+`
 export const PokedexHeader = styled.div`
 display: flex;
 flex-direction: row;
@@ -12,4 +16,8 @@ display: grid;
 gap: 10px;
 grid-template-columns: repeat(3, 1fr);
 
+`
+
+export const PokedexTitulo = styled.h1`
+color:white
 `

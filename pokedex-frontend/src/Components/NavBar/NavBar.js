@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import FavoriteContext from "../../contexts/favoritesContext";
-import { Nav, NavBarImg } from "./style";
+import { Nav, NavBarImg ,DivFavoritos} from "./style";
 
 const NavBar = () => {
   const { favoritePokemons } = useContext(FavoriteContext);
@@ -9,10 +9,10 @@ const NavBar = () => {
   return (
     <Nav>
       <div>
-        <NavBarImg alt="logo-pokedex" src={logo} className="navBar-img" />
+        <NavBarImg  alt="logo-pokedex" src={logo}  />
       </div>
 
-      <div>Favoritos: {favoritePokemons.length}❤️</div>
+      <DivFavoritos>Favoritos: {favoritePokemons.length}❤️</DivFavoritos>
     </Nav>
   );
 };

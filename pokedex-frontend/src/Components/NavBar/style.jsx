@@ -6,8 +6,15 @@ export const Nav = styled.div`
   flex-direction: space-evenly;
   justify-content: center;
   align-items: center;
+  background-color: #121212;
 `;
 export const NavBarImg = styled.img`
-  width: 10rem;
+  width: 12rem;
   margin-right: 50px;
+  margin-top:1.5em
 `;
+
+export const DivFavoritos = styled.div`
+color:white;
+margin-top:1.5em
+`

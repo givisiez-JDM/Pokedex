@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import FavoriteContext from "../../contexts/favoritesContext";
+import TypeColors from "../../TypeColors";
 import {
   Card,
   ImgPokemonContainer,
@@ -21,15 +22,16 @@ const Pokemon = (props) => {
     updateFavoritePokemons(pokemon.name);
   };
 
+
   const heart = favoritePokemons.includes(pokemon.name) ? "❤️" : "🖤";
 
   return (
     <div>
-      <Card>
+      <Card style={{ backgroundColor: TypeColors[pokemon.types[0].type.name] }} key={pokemon.id}>
         <ImgPokemonContainer>
           <PokemonImg
             alt={pokemon.name}
-            src={pokemon.sprites.front_default}
+            src={pokemon['sprites']['versions']['generation-v']['black-white']['animated']['front_default']}
           ></PokemonImg>
         </ImgPokemonContainer>
 

@@ -5,6 +5,7 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 import Pokedex from "./Components/Pokedex/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "./api";
 import { FavoriteProvider } from "./contexts/favoritesContext";
+import Footer from "./Components/Footer/Footer";
 
 const favoritesKey = "f";
 
@@ -16,7 +17,7 @@ function App() {
   const [favorites, setFavorites] = useState([]);
   const [notFound, setNotFound] = useState(false);
 
-  const itensPerPage = 25;
+  const itensPerPage = 24;
 
   const fetchPokemons = async () => {
     try {
@@ -81,17 +82,18 @@ function App() {
     setLoading(false);
   };
   return (
+    <>
     <FavoriteProvider
       value={{
         favoritePokemons: favorites,
         updateFavoritePokemons: updateFavoritePokemons,
       }}
     >
-      <div>
+      <div ClassName="App">
         <NavBar />
         <SearchBar onSearch={onSearchHandler} />
         {notFound ? (
-          <div class-name="not-found-text"> Meteu essa?! </div>
+          <> Pokemon não encontrado! </>
         ) : (
           <Pokedex
             pokemons={pokemons}
@@ -103,6 +105,8 @@ function App() {
         )}
       </div>
     </FavoriteProvider>
+    <Footer/>
+    </>
   );
 }
 

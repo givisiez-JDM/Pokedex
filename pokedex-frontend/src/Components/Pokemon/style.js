@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   display: flex;
-  margin: 10px 10px;
+  margin: px 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  //border: 1px solid lightgrey;
+  border: 1px solid lightgrey;
 `;
 
 export const ImgPokemonContainer = styled.div`
@@ -34,7 +34,14 @@ export const CardHeader = styled.div`
 
   h3 {
     text-transform: capitalize;
+   
   }
+
+  div{
+    margin-right:5px;
+    margin-bottom:5px;
+  }
+
 `;
 
 export const CardBottom = styled.div`
