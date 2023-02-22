@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const Card = styled.div`
   display: flex;
-  margin: px 10px;
+  margin: 10px 10px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   border: 1px solid lightgrey;
+  width: 425px;
 `;
 
 export const ImgPokemonContainer = styled.div`
