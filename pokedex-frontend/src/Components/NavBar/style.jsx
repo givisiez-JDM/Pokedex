@@ -7,9 +7,14 @@ export const Nav = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #121212;
+  border: none;
+  @media screen and (min-width: 300px) {
+    margin-bottom: 10px;
+    background-color: #121212;
+  }
 `;
 export const NavBarImg = styled.img`
-  width: 12rem;
+  width: 10rem;
   margin-right: 50px;
   margin-top: 1.5em;
 `;
@@ -17,4 +22,5 @@ export const NavBarImg = styled.img`
 export const DivFavoritos = styled.div`
   color: white;
   margin-top: 1.5em;
+  background-color: #121212;
 `;

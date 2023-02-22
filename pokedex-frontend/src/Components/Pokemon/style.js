@@ -6,7 +6,8 @@ export const Card = styled.div`
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
   border: 1px solid lightgrey;
-  width: 425px;
+  width: 300px; 
+
 `;
 
 export const ImgPokemonContainer = styled.div`
@@ -59,5 +60,6 @@ export const TypePokemon = styled.div`
 export const TypeText = styled.div`
   margin-right: 10px;
 `;
+
 
 export const PokemonButtonHeart = styled.button``;

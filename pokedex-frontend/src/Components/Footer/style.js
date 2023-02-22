@@ -7,6 +7,7 @@ export const FooterContainer = styled.div`
     background-color: #121212;
     color: white;
     font-size: 1em;
+    border: none;
 `
 
 export const InformationsContainer = styled.div`

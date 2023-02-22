@@ -18,6 +18,8 @@ export const SearchBarInput = styled.input`
   border: none;
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
+ 
+
 `;
 export const SearchBtnButton = styled.button`
   background-color: #0e6f9f;

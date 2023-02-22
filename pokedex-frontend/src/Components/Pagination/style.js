@@ -7,7 +7,3 @@ export const PaginationContainer = styled.div`
     color: white;
   `
 
-export const ButtonLeft = styled.div`
-  background-color: #121212;
-  border: none;
-  `

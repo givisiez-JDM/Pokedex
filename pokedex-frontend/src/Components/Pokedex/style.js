@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 export const PokedexContainer = styled.div`
 background-color: #121212;
+border: none;
 
 `
 export const PokedexHeader = styled.div`
@@ -15,6 +16,9 @@ padding: 10px;
 export const PokedexGrid = styled.div`
 display:flex;
 flex-wrap:wrap;
+align-items: center;
+align-items: center;
+justify-content:space-evenly;
 `
 
 export const PokedexTitulo = styled.h1`

@@ -10,7 +10,6 @@ import { TextLoading } from "./Components/Pokedex/style";
 
 
 
-
 const favoritesKey = "f";
 
 function App() {
@@ -99,7 +98,7 @@ function App() {
           <NavBar />
           <SearchBar onSearch={onSearchHandler} />
           {notFound ? (
-            <TextLoading> Pokemon não encontrado! </TextLoading>
+            <TextLoading>Pokemon não Existe!</TextLoading>
           ) : (
             <Pokedex
               pokemons={pokemons}
@@ -112,6 +111,7 @@ function App() {
         </div>
       </FavoriteProvider>
       <Footer />
+
     </>
   );
 }
