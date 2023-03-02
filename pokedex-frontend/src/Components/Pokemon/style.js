@@ -3,11 +3,17 @@ import styled from "styled-components";
 export const Card = styled.div`
   display: flex;
   margin: 10px 10px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  //box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  border: 1px solid lightgrey;
-  width: 300px; 
+  border: 4px solid rgba(0, 0, 0, 0);
+  width: 300px;
+  &:hover {
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+  }
 
+  @media (max-width: 550px) {
+    width: 300px;
+  }
 `;
 
 export const ImgPokemonContainer = styled.div`
@@ -36,14 +42,12 @@ export const CardHeader = styled.div`
 
   h3 {
     text-transform: capitalize;
-   
   }
 
-  div{
-    margin-right:5px;
-    margin-bottom:5px;
+  div {
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
-
 `;
 
 export const CardBottom = styled.div`
@@ -60,6 +64,5 @@ export const TypePokemon = styled.div`
 export const TypeText = styled.div`
   margin-right: 10px;
 `;
-
 
 export const PokemonButtonHeart = styled.button``;

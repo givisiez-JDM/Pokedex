@@ -8,8 +8,6 @@ import { FavoriteProvider } from "./contexts/favoritesContext";
 import Footer from "./Components/Footer/Footer";
 import { TextLoading } from "./Components/Pokedex/style";
 
-
-
 const favoritesKey = "f";
 
 function App() {
@@ -84,7 +82,6 @@ function App() {
     }
     setLoading(false);
   };
-  
 
   return (
     <>
@@ -111,7 +108,6 @@ function App() {
         </div>
       </FavoriteProvider>
       <Footer />
-
     </>
   );
 }

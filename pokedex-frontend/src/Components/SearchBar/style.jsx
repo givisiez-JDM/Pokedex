@@ -5,27 +5,41 @@ export const SearchContainer = styled.div`
   margin: 0px auto;
   padding: 0 20px;
   align-items: center;
-  background-color: #121212;
+  justify-content: center;
+  background-color: #d11919;
 `;
 export const SearchBarDiv = styled.div`
-  background-color: white;
+  background-color: #d11919;
   margin-right: 20px;
+  padding: 20px;
 `;
 export const SearchBarInput = styled.input`
   padding: 0.7em;
+  width: 30vw;
   box-shadow: 0px 2px 2px (0, 0, 0, 0.25);
-  border-radius: 3px;
-  border: none;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
- 
-
+  border: 0;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  &:focus {
+    outline: none;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
 `;
 export const SearchBtnButton = styled.button`
-  background-color: #0e6f9f;
-  border: none;
+  background-color: #d11919;
+  border: solid 1px #fff;
   border-radius: 10px;
   height: 3em;
-  color: white;
+  width: 6em;
+  color: #fff;
   padding: 10px 12px;
+  cursor: pointer;
+  &:hover {
+    background-color: #fff;
+    border: solid 1px #d11919;
+    color: #d11919;
+  }
 `;

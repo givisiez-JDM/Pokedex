@@ -6,11 +6,11 @@ export const Nav = styled.div`
   flex-direction: space-evenly;
   justify-content: center;
   align-items: center;
-  background-color: #121212;
+  background-color: #d11919;
   border: none;
   @media screen and (min-width: 300px) {
     margin-bottom: 10px;
-    background-color: #121212;
+    background-color: #d11919;
   }
 `;
 export const NavBarImg = styled.img`
@@ -22,5 +22,7 @@ export const NavBarImg = styled.img`
 export const DivFavoritos = styled.div`
   color: white;
   margin-top: 1.5em;
-  background-color: #121212;
+  background-color: #d11919;
+  font-size: 1.2rem;
+  font-weight: 600;
 `;

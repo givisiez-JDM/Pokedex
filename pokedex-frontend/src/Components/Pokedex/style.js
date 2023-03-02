@@ -1,31 +1,38 @@
-import styled from "styled-components"
-
+import styled from "styled-components";
 
 export const PokedexContainer = styled.div`
-background-color: #121212;
-border: none;
-
-`
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 72vh;
+  @media (max-width: 768px) {
+    width: 100vw;
+  }
+`;
 export const PokedexHeader = styled.div`
-display: flex;
-flex-direction: row;
-justify-content:space-between;
-align-items: center;
-padding: 10px;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+`;
 export const PokedexGrid = styled.div`
-display:flex;
-flex-wrap:wrap;
-align-items: center;
-align-items: center;
-justify-content:space-evenly;
-`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+`;
 
 export const PokedexTitulo = styled.h1`
-color:white
-`
+  color: #d11919;
+`;
 export const TextLoading = styled.div`
-color:#F95587;
-font-size: 2em;
-background-color: #121212;
-`
+  color: #d11919;
+  font-size: 2em;
+`;

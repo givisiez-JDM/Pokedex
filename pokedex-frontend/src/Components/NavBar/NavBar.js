@@ -12,7 +12,10 @@ const NavBar = () => {
         <NavBarImg alt="logo-pokedex" src={logo} />
       </div>
 
-      <DivFavoritos>Favoritos: {favoritePokemons.length}❤️</DivFavoritos>
+      <DivFavoritos>
+        Favoritos: {favoritePokemons.length}
+        <span style={{ marginLeft: "10px" }}>❤️</span>
+      </DivFavoritos>
     </Nav>
   );
 };
